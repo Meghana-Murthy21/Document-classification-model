@@ -37,7 +37,7 @@ pip install -r requirements.txt
 1. Organize your training dataset in `dataset/` with subfolders `letter/`, `resume/`, `scientific/`.
 2. Run the training script:
 ```bash
-python train.py
+python train_classification.py
 ```
 3. This will:
    - Extract text from images using EasyOCR
@@ -49,7 +49,7 @@ python train.py
 1. Place all images you want to classify in `inference_data/`.
 2. Run segregation script:
 ```bash
-python segregation.py
+python inference.py
 ```
 3. The script will:
    - Extract text from each image
@@ -57,7 +57,7 @@ python segregation.py
    - Move images into `Segregated_Data/<class>/` folders
 
 ### Single Image Inference
-You can modify `segregation.py` to provide a single image path:
+You can modify `inference.py` to provide a single image path:
 ```python
 image_path = 'inference_data/test_image.jpg'
 prediction = predict_label(image_path)
